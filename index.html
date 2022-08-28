@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Comanda</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Comanda</h1>
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Novo Cliente</legend>
+                <input type="text" id="nomeCliente" placeholder="Nome">
+                <label><input type="checkbox" name="tarifa" value="true">O cliente irá pagar a tarifa de 10%</label>
+                <input type="reset" value="+" id="adicionarCliente">
+            </fieldset>
+            <fieldset>
+                <legend>Novo Produto</legend>
+                <input type="text" id="nomeProduto" placeholder="Nome">
+                <input type="text" id="precoProduto" placeholder="Preço">
+                <input type="text" id="quantidadeProduto" placeholder="Quantidade">
+                <input type="reset" value="+" id="adicionarProduto">
+            </fieldset>
+        </form>
+
+        <section>
+            <div class="tabela">
+                <table id="clientes_cadastrados">
+                    <thead>
+                        <th>ID</th>
+                        <th>Nome</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="tabela">
+                <table id="produtos_cadastrados">
+                    <thead>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Pessoas que consumiram</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <input type="button" value="Calcular Gastos Individuais" id="calcular">
+
+            <div id="notas_fiscais"></div>
+        </section>
+    </main>
+
+    <script src="funcoes.js"></script>
+</body>
+</html>
